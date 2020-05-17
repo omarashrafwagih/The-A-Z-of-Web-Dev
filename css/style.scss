@@ -1,0 +1,413 @@
+/* ---------------------------------------------------------------------------------------------- Variables */
+$main-color: #34354e;
+/* ---------------------------------------------------------------------------------------------- Extends Styles */
+
+%transition-3 {
+  transition: all 0.3s ease-in-out;
+}
+
+/* ---------------------------------------------------------------------------------------------- Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  background-image: url(../images/body-bg.png);
+  background-repeat: repeat;
+  width: 100%;
+  color: $main-color;
+}
+
+/* ---------------------------------------------------------------------------------------------- Nav Styles */
+
+nav {
+  .left {
+    float: left;
+    margin-top: 25px;
+    margin-left: 20px;
+  }
+  .right {
+    float: right;
+    margin-top: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-right: 20px;
+  }
+  .clear {
+    clear: both;
+  }
+  a {
+    @extend %transition-3;
+    color: $main-color;
+    &:hover {
+      text-decoration: none;
+      color: rgb(139, 139, 139);
+    }
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    .right {
+      display: none;
+    }
+  }
+}
+/* ---------------------------------------------------------------------------------------------- About Section Styles */
+
+#about {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/body-bg.png);
+  z-index: 2;
+  #close-btn {
+    @extend %transition-3;
+    width: 25px;
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    cursor: pointer;
+    &:hover {
+      transform: scale(0.8);
+    }
+  }
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h2 {
+      font-family: 'Titan One', cursive;
+      font-size: 5vw;
+    }
+    p {
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-top: 40px;
+      line-height: 2em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #about {
+    display: none;
+  }
+}
+/* ---------------------------------------------------------------------------------------------- Hero Section Styles */
+
+#hero {
+  height: calc(100vh - 52px);
+  width: 100%;
+  .container {
+    padding-top: 30px;
+    h1 {
+      font-family: 'Titan One', cursive;
+      font-size: 5vw;
+      margin-top: 60px;
+      color: $main-color;
+    }
+    p {
+      font-size: 22px;
+      margin-top: 30px;
+      color: $main-color;
+    }
+    img {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+    #icon {
+      @extend %transition-3;
+      width: 25px;
+      height: 25px;
+      margin: 0 auto;
+      margin-top: 50px;
+      animation: downAnim 0.4s alternate infinite;
+      &:hover {
+        transform: scale(0.8);
+      }
+    }
+  }
+}
+
+@keyframes downAnim {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 992px) {
+  #hero {
+    text-align: center;
+    .container {
+      padding-top: 0px;
+      p {
+        font-size: 18px;
+        margin-top: 15px;
+      }
+      img {
+        max-height: 350px;
+        margin: 10px auto;
+        display: block;
+      }
+      #icon {
+        display: none;
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------- Browse Section Styles */
+
+#browse {
+  h2 {
+    font-family: 'Titan One', cursive;
+    font-size: 34px;
+    color: $main-color;
+  }
+  p {
+    font-size: 22px;
+    color: $main-color;
+  }
+}
+
+@media (max-width: 1020px) {
+  #browse {
+    h2 {
+      font-size: 26px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------- Letters Section Styles */
+
+#letters {
+  .container {
+    .row {
+      .letter-item {
+        cursor: pointer;
+        border: 1px solid #d3c0ae;
+        background-color: #ebded1;
+        color: $main-color;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 10px auto;
+        h3 {
+          font-family: 'Titan One', cursive;
+          font-size: 80px;
+        }
+        h4 {
+          @extend %transition-3;
+          font-size: 18px;
+          &:hover {
+            transform: translateX(10px);
+          }
+          &:first-of-type {
+            color: #00aa66;
+            font-size: 18px;
+            &::after {
+              display: block;
+              width: 100%;
+              height: 1px;
+              margin-top: 5px;
+              content: '';
+              background-color: $main-color;
+            }
+          }
+          &:nth-of-type(2) {
+            &::before {
+              content: '+';
+              margin-right: 10px;
+            }
+          }
+          &:nth-of-type(3) {
+            &::before {
+              content: '+';
+              margin-right: 10px;
+            }
+          }
+          &:nth-of-type(4) {
+            &::before {
+              content: '+';
+              margin-right: 10px;
+            }
+          }
+          &:nth-of-type(5) {
+            &::before {
+              content: '+';
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 0px) {
+  #letters {
+    .container {
+      .row {
+        .letter-item {
+          max-width: calc(100% - 20px);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  #letters {
+    .container {
+      .row {
+        .letter-item {
+          max-width: calc(50% - 40px);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #letters {
+    .container {
+      .row {
+        .letter-item {
+          max-width: calc(25% - 20px);
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------- Popups Section Styles */
+
+#allitems {
+  animation: popupAnim 1s forwards;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/body-bg.png);
+  color: $main-color;
+  overflow: scroll;
+  .container {
+    overflow: scroll;
+    img {
+      @extend %transition-3;
+      width: 20px;
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(0.8);
+      }
+    }
+    .itemaya {
+      display: none;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      h2 {
+        font-family: 'Titan One', cursive;
+        font-size: 10vw;
+      }
+      h3 {
+        font-size: 26px;
+        &::after {
+          display: block;
+          content: '';
+          height: 1px;
+          width: 100%;
+          background-color: $main-color;
+        }
+      }
+      p {
+        font-size: 18px;
+      }
+      a {
+        @extend %transition-3;
+        font-size: 18px;
+        color: #00aa66;
+        &::after {
+          @extend %transition-3;
+          display: block;
+          width: 0%;
+          height: 2px;
+          content: '';
+          background-color: $main-color;
+        }
+        &:hover {
+          text-decoration: none;
+          color: #00aa66;
+          &::after {
+            width: 70px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes popupAnim {
+  0%,
+  50% {
+    transform: scale(0.75);
+    border-radius: 25%;
+  }
+  25%,
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 576px) {
+  #allitems {
+    animation: none;
+  }
+}
+/* ---------------------------------------------------------------------------------------------- Footer Styles */
+
+footer {
+  padding-top: 80px;
+  p {
+    font-size: 18px;
+    color: $main-color;
+    a {
+      color: $main-color;
+      &:hover {
+        text-decoration: none;
+        color: $main-color;
+        color: #8f52fc;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  footer {
+    p {
+      font-size: 12px;
+    }
+  }
+}

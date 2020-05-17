@@ -1,0 +1,439 @@
+/* ---------------------------------------------------------------------------------------------- Variables */
+/* ---------------------------------------------------------------------------------------------- Extends Styles */
+nav a, #about #close-btn, #hero .container #icon, #letters .container .row .letter-item h4, #allitems .container img, #allitems .container .itemaya a, #allitems .container .itemaya a::after {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ---------------------------------------------------------------------------------------------- Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  background-image: url(../images/body-bg.png);
+  background-repeat: repeat;
+  width: 100%;
+  color: #34354e;
+}
+
+/* ---------------------------------------------------------------------------------------------- Nav Styles */
+nav .left {
+  float: left;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+nav .right {
+  float: right;
+  margin-top: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+nav .clear {
+  clear: both;
+}
+
+nav a {
+  color: #34354e;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #8b8b8b;
+}
+
+@media (max-width: 768px) {
+  nav .right {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------- About Section Styles */
+#about {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/body-bg.png);
+  z-index: 2;
+}
+
+#about #close-btn {
+  width: 25px;
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  cursor: pointer;
+}
+
+#about #close-btn:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+#about .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#about .text h2 {
+  font-family: 'Titan One', cursive;
+  font-size: 5vw;
+}
+
+#about .text p {
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-top: 40px;
+  line-height: 2em;
+}
+
+@media (max-width: 768px) {
+  #about {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------- Hero Section Styles */
+#hero {
+  height: calc(100vh - 52px);
+  width: 100%;
+}
+
+#hero .container {
+  padding-top: 30px;
+}
+
+#hero .container h1 {
+  font-family: 'Titan One', cursive;
+  font-size: 5vw;
+  margin-top: 60px;
+  color: #34354e;
+}
+
+#hero .container p {
+  font-size: 22px;
+  margin-top: 30px;
+  color: #34354e;
+}
+
+#hero .container img {
+  max-width: 100%;
+  margin-top: 30px;
+}
+
+#hero .container #icon {
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+  margin-top: 50px;
+  -webkit-animation: downAnim 0.4s alternate infinite;
+          animation: downAnim 0.4s alternate infinite;
+}
+
+#hero .container #icon:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+@-webkit-keyframes downAnim {
+  from {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes downAnim {
+  from {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@media (max-width: 992px) {
+  #hero {
+    text-align: center;
+  }
+  #hero .container {
+    padding-top: 0px;
+  }
+  #hero .container p {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  #hero .container img {
+    max-height: 350px;
+    margin: 10px auto;
+    display: block;
+  }
+  #hero .container #icon {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------- Browse Section Styles */
+#browse h2 {
+  font-family: 'Titan One', cursive;
+  font-size: 34px;
+  color: #34354e;
+}
+
+#browse p {
+  font-size: 22px;
+  color: #34354e;
+}
+
+@media (max-width: 1020px) {
+  #browse h2 {
+    font-size: 26px;
+  }
+  #browse p {
+    font-size: 20px;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------- Letters Section Styles */
+#letters .container .row .letter-item {
+  cursor: pointer;
+  border: 1px solid #d3c0ae;
+  background-color: #ebded1;
+  color: #34354e;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 10px auto;
+}
+
+#letters .container .row .letter-item h3 {
+  font-family: 'Titan One', cursive;
+  font-size: 80px;
+}
+
+#letters .container .row .letter-item h4 {
+  font-size: 18px;
+}
+
+#letters .container .row .letter-item h4:hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+#letters .container .row .letter-item h4:first-of-type {
+  color: #00aa66;
+  font-size: 18px;
+}
+
+#letters .container .row .letter-item h4:first-of-type::after {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 5px;
+  content: '';
+  background-color: #34354e;
+}
+
+#letters .container .row .letter-item h4:nth-of-type(2)::before {
+  content: '+';
+  margin-right: 10px;
+}
+
+#letters .container .row .letter-item h4:nth-of-type(3)::before {
+  content: '+';
+  margin-right: 10px;
+}
+
+#letters .container .row .letter-item h4:nth-of-type(4)::before {
+  content: '+';
+  margin-right: 10px;
+}
+
+#letters .container .row .letter-item h4:nth-of-type(5)::before {
+  content: '+';
+  margin-right: 10px;
+}
+
+@media (min-width: 0px) {
+  #letters .container .row .letter-item {
+    max-width: calc(100% - 20px);
+  }
+}
+
+@media (min-width: 576px) {
+  #letters .container .row .letter-item {
+    max-width: calc(50% - 40px);
+  }
+}
+
+@media (min-width: 992px) {
+  #letters .container .row .letter-item {
+    max-width: calc(25% - 20px);
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------- Popups Section Styles */
+#allitems {
+  -webkit-animation: popupAnim 1s forwards;
+          animation: popupAnim 1s forwards;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/body-bg.png);
+  color: #34354e;
+  overflow: scroll;
+}
+
+#allitems .container {
+  overflow: scroll;
+}
+
+#allitems .container img {
+  width: 20px;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  cursor: pointer;
+}
+
+#allitems .container img:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+#allitems .container .itemaya {
+  display: none;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+}
+
+#allitems .container .itemaya h2 {
+  font-family: 'Titan One', cursive;
+  font-size: 10vw;
+}
+
+#allitems .container .itemaya h3 {
+  font-size: 26px;
+}
+
+#allitems .container .itemaya h3::after {
+  display: block;
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: #34354e;
+}
+
+#allitems .container .itemaya p {
+  font-size: 18px;
+}
+
+#allitems .container .itemaya a {
+  font-size: 18px;
+  color: #00aa66;
+}
+
+#allitems .container .itemaya a::after {
+  display: block;
+  width: 0%;
+  height: 2px;
+  content: '';
+  background-color: #34354e;
+}
+
+#allitems .container .itemaya a:hover {
+  text-decoration: none;
+  color: #00aa66;
+}
+
+#allitems .container .itemaya a:hover::after {
+  width: 70px;
+}
+
+@-webkit-keyframes popupAnim {
+  0%,
+  50% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+    border-radius: 25%;
+  }
+  25%,
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes popupAnim {
+  0%,
+  50% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+    border-radius: 25%;
+  }
+  25%,
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media (max-width: 576px) {
+  #allitems {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------- Footer Styles */
+footer {
+  padding-top: 80px;
+}
+
+footer p {
+  font-size: 18px;
+  color: #34354e;
+}
+
+footer p a {
+  color: #34354e;
+}
+
+footer p a:hover {
+  text-decoration: none;
+  color: #34354e;
+  color: #8f52fc;
+}
+
+@media (max-width: 576px) {
+  footer p {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
