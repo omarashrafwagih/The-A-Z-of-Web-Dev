@@ -324,6 +324,7 @@ nav {
       }
     }
     .itemaya {
+      padding: 50px 0;
       display: none;
       position: absolute;
       left: 50%;
@@ -331,6 +332,7 @@ nav {
       h2 {
         font-family: 'Titan One', cursive;
         font-size: 10vw;
+        animation: popupAnimTwo 1s forwards;
       }
       h3 {
         font-size: 26px;
@@ -370,14 +372,22 @@ nav {
 }
 
 @keyframes popupAnim {
-  0%,
-  50% {
-    transform: scale(0.75);
-    border-radius: 25%;
+  0% {
+    transform: scale(0);
   }
-  25%,
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes popupAnimTwo {
+  0% {
+    transform: scale(0);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: scale(1);
+    transform: rotate(-360deg);
   }
 }
 

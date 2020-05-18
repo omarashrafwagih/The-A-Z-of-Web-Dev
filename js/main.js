@@ -25,7 +25,7 @@ let letters = document.querySelectorAll('.letter-item');
 let itemsPage = document.getElementById('allitems');
 let popups = document.querySelectorAll('.itemaya');
 let closebtnTwo = document.getElementById('closepopup');
-
+var i = 0;
 //Setting Position From Top Dynamically for itemspage.
 window.addEventListener('scroll', function () {
   itemsPage.style.top = window.scrollY + 'px';

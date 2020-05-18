@@ -326,6 +326,7 @@ nav a:hover {
 }
 
 #allitems .container .itemaya {
+  padding: 50px 0;
   display: none;
   position: absolute;
   left: 50%;
@@ -336,6 +337,8 @@ nav a:hover {
 #allitems .container .itemaya h2 {
   font-family: 'Titan One', cursive;
   font-size: 10vw;
+  -webkit-animation: popupAnimTwo 1s forwards;
+          animation: popupAnimTwo 1s forwards;
 }
 
 #allitems .container .itemaya h3 {
@@ -377,13 +380,10 @@ nav a:hover {
 }
 
 @-webkit-keyframes popupAnim {
-  0%,
-  50% {
-    -webkit-transform: scale(0.75);
-            transform: scale(0.75);
-    border-radius: 25%;
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
-  25%,
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -391,16 +391,43 @@ nav a:hover {
 }
 
 @keyframes popupAnim {
-  0%,
-  50% {
-    -webkit-transform: scale(0.75);
-            transform: scale(0.75);
-    border-radius: 25%;
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
-  25%,
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+
+@-webkit-keyframes popupAnimTwo {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes popupAnimTwo {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
 
