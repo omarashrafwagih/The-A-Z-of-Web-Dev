@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------------------------------- Variables */
 /* ---------------------------------------------------------------------------------------------- Extends Styles */
-nav a, #about #close-btn, #hero .container #icon, #letters .container .row .letter-item h4, #allitems .container img, #allitems .container .itemaya a, #allitems .container .itemaya a::after {
+nav a, #about #close-btn, #hero .container .row #icon, #letters .container .row .letter-item h4, #allitems .container img, #allitems .container .itemaya a, #allitems .container .itemaya a::after {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -120,25 +120,29 @@ nav a:hover {
   padding-top: 30px;
 }
 
-#hero .container h1 {
+#hero .container .row .up {
+  z-index: 1;
+}
+
+#hero .container .row h1 {
   font-family: 'Titan One', cursive;
   font-size: 5vw;
   margin-top: 60px;
   color: #34354e;
 }
 
-#hero .container p {
+#hero .container .row p {
   font-size: 22px;
   margin-top: 30px;
   color: #34354e;
 }
 
-#hero .container img {
+#hero .container .row img {
   max-width: 100%;
   margin-top: 30px;
 }
 
-#hero .container #icon {
+#hero .container .row #icon {
   width: 25px;
   height: 25px;
   margin: 0 auto;
@@ -147,7 +151,7 @@ nav a:hover {
           animation: downAnim 0.4s alternate infinite;
 }
 
-#hero .container #icon:hover {
+#hero .container .row #icon:hover {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }

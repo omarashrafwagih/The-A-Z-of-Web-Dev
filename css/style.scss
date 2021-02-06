@@ -112,30 +112,35 @@ nav {
   width: 100%;
   .container {
     padding-top: 30px;
-    h1 {
-      font-family: 'Titan One', cursive;
-      font-size: 5vw;
-      margin-top: 60px;
-      color: $main-color;
-    }
-    p {
-      font-size: 22px;
-      margin-top: 30px;
-      color: $main-color;
-    }
-    img {
-      max-width: 100%;
-      margin-top: 30px;
-    }
-    #icon {
-      @extend %transition-3;
-      width: 25px;
-      height: 25px;
-      margin: 0 auto;
-      margin-top: 50px;
-      animation: downAnim 0.4s alternate infinite;
-      &:hover {
-        transform: scale(0.8);
+    .row{
+      .up{
+        z-index: 1;
+      }
+      h1 {
+        font-family: 'Titan One', cursive;
+        font-size: 5vw;
+        margin-top: 60px;
+        color: $main-color;
+      }
+      p {
+        font-size: 22px;
+        margin-top: 30px;
+        color: $main-color;
+      }
+      img {
+        max-width: 100%;
+        margin-top: 30px;
+      }
+      #icon {
+        @extend %transition-3;
+        width: 25px;
+        height: 25px;
+        margin: 0 auto;
+        margin-top: 50px;
+        animation: downAnim 0.4s alternate infinite;
+        &:hover {
+          transform: scale(0.8);
+        }
       }
     }
   }
